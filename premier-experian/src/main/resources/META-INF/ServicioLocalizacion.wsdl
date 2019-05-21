@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp200409="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsp200607="http://www.w3.org/2006/07/ws-policy" xmlns:ns0="http://www.datacredito.com.co/services/v1/ServicioLocalizacion" targetNamespace="http://www.datacredito.com.co/services/v1/ServicioLocalizacion">
+<wsdl:types xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema>
+<xsd:import schemaLocation="ServicioLocalizacion.xsd2.xsd" namespace="http://www.datacredito.com.co/services/schema/ServicioLocalizacion/v1"/></xsd:schema></wsdl:types>
+<wsdl:message name="consultarDatosLocalizacionRequest">
+<wsdl:part name="parameters" element="xsns:ConsultarDatosLocalizacion" xmlns:xsns="http://www.datacredito.com.co/services/schema/ServicioLocalizacion/v1"/></wsdl:message>
+<wsdl:message name="consultarDatosLocalizacionResponse">
+<wsdl:part name="parameters" element="xsns:ConsultarDatosLocalizacionResponse" xmlns:xsns="http://www.datacredito.com.co/services/schema/ServicioLocalizacion/v1"/></wsdl:message>
+<wsdl:message name="customConsultarDatosLocalizacionRequest">
+<wsdl:part name="parameters" element="xsns:CustomConsultarDatosLocalizacion" xmlns:xsns="http://www.datacredito.com.co/services/schema/ServicioLocalizacion/v1"/></wsdl:message>
+<wsdl:message name="customConsultarDatosLocalizacionResponse">
+<wsdl:part name="parameters" element="xsns:CustomConsultarDatosLocalizacionResponse" xmlns:xsns="http://www.datacredito.com.co/services/schema/ServicioLocalizacion/v1"/></wsdl:message>
+<wsdl:message name="ServicioLocalizacionException">
+<wsdl:part name="fault" element="xsns:Fault" xmlns:xsns="http://www.datacredito.com.co/services/schema/ServicioLocalizacion/v1"/></wsdl:message>
+<wsdl:portType name="ServicioLocalizacion">
+<wsdl:operation name="consultarDatosLocalizacion">
+<wsdl:input name="consultarDatosLocalizacionRequest" message="ns0:consultarDatosLocalizacionRequest"/>
+<wsdl:output name="consultarDatosLocalizacionResponse" message="ns0:consultarDatosLocalizacionResponse"/>
+<wsdl:fault name="ServicioLocalizacionException" message="ns0:ServicioLocalizacionException"/></wsdl:operation>
+<wsdl:operation name="customConsultarDatosLocalizacion">
+<wsdl:input name="customConsultarDatosLocalizacionRequest" message="ns0:customConsultarDatosLocalizacionRequest"/>
+<wsdl:output name="customConsultarDatosLocalizacionResponse" message="ns0:customConsultarDatosLocalizacionResponse"/>
+<wsdl:fault name="ServicioLocalizacionException" message="ns0:ServicioLocalizacionException"/></wsdl:operation></wsdl:portType>
+<wsdl:binding name="ServicioLocalizacionSOAP" type="ns0:ServicioLocalizacion">
+<soap11:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+<wsdl:operation name="consultarDatosLocalizacion">
+<soap11:operation soapAction="http://www.datacredito.com.co/ServicioLocalizacion/consultarDatosLocalizacion" style="document"/>
+<wsdl:input name="consultarDatosLocalizacionRequest">
+<soap11:body use="literal"/></wsdl:input>
+<wsdl:output name="consultarDatosLocalizacionResponse">
+<soap11:body use="literal"/></wsdl:output>
+<wsdl:fault name="ServicioLocalizacionException">
+<soap11:fault name="ServicioLocalizacionException" use="literal"/></wsdl:fault></wsdl:operation>
+<wsdl:operation name="customConsultarDatosLocalizacion">
+<soap11:operation soapAction="http://www.datacredito.com.co/ServicioLocalizacion/customConsultarDatosLocalizacion" style="document"/>
+<wsdl:input name="customConsultarDatosLocalizacionRequest">
+<soap11:body use="literal"/></wsdl:input>
+<wsdl:output name="customConsultarDatosLocalizacionResponse">
+<soap11:body use="literal"/></wsdl:output>
+<wsdl:fault name="ServicioLocalizacionException">
+<soap11:fault name="ServicioLocalizacionException" use="literal"/></wsdl:fault></wsdl:operation></wsdl:binding>
+<wsdl:service name="ServicioLocalizacion">
+<wsdl:port name="ServicioLocalizacionPort.dmz.https" binding="ns0:ServicioLocalizacionSOAP">
+<soap11:address location="https://10.54.8.23:443/wss/localizacion/services/ServicioLocalizacion"/></wsdl:port>
+<wsdl:port name="ServicioLocalizacionPort.wan.https" binding="ns0:ServicioLocalizacionSOAP">
+<soap11:address location="https://10.54.8.24:443/wss/localizacion/services/ServicioLocalizacion"/></wsdl:port></wsdl:service></wsdl:definitions>

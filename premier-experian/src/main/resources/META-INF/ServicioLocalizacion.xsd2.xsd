@@ -1,0 +1,122 @@
+<xs:schema targetNamespace="http://www.datacredito.com.co/services/schema/ServicioLocalizacion/v1" attributeFormDefault="unqualified" elementFormDefault="qualified" version="1.0" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:of="http://www.datacredito.com.co/services/schema/ServicioLocalizacion/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+   <xs:element name="ConsultarDatosLocalizacion">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="Solicitud">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="SolicitudDatosLocalizacion">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element type="xs:string" name="TipoIdentificacion"/>
+                              <xs:element type="xs:string" name="Identificacion"/>
+                              <xs:element type="xs:string" name="Usuario"/>
+                              <xs:element type="xs:string" name="Clave"/>
+                              <xs:element type="xs:string" name="PrimerApellido"/>
+                              <xs:element type="xs:string" name="Name" minOccurs="0"/>
+                              <xs:element type="xs:string" name="FullName" minOccurs="0"/>
+                              <xs:element type="xs:string" name="Issuedate" minOccurs="0"/>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="ConsultarDatosLocalizacionResponse">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="ConsultarDatosLocalizacionReturn" type="xs:string"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="CustomConsultarDatosLocalizacion">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="Solicitud">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="SolicitudDatosLocalizacion">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element type="xs:string" name="TipoIdentificacion"/>
+                              <xs:element type="xs:string" name="Identificacion"/>
+                              <xs:element type="xs:string" name="Usuario"/>
+                              <xs:element type="xs:string" name="Clave"/>
+                              <xs:element type="xs:string" name="PrimerApellido"/>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="Conf" minOccurs="0">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="Params" minOccurs="0">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="Param" minOccurs="0" maxOccurs="unbounded">
+                                 <xs:complexType>
+                                    <xs:sequence>
+                                       <xs:element type="xs:string" name="Name"/>
+                                       <xs:element type="xs:string" name="Value"/>
+                                    </xs:sequence>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="CustomConsultarDatosLocalizacionResponse">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="CustomConsultarDatosLocalizacionReturn" type="xs:string"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="Fault" final="extension">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="0" name="faultcode" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="faultstring" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="detail">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="ServicioLocalizacionException" type="of:ServicioLocalizacionException" minOccurs="0" maxOccurs="1"/>
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="ServicioLocalizacionException">
+      <xs:sequence>
+         <xs:element name="Business" type="of:Business" minOccurs="0" maxOccurs="1"/>
+         <xs:element name="Runtime" type="of:Runtime" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="Business">
+      <xs:sequence>
+         <xs:element maxOccurs="1" minOccurs="0" name="error-code" type="xs:string"/>
+         <xs:element maxOccurs="1" minOccurs="0" name="error-message" type="xs:string"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="Runtime">
+      <xs:sequence>
+         <xs:element maxOccurs="1" minOccurs="0" name="uuid" type="xs:string"/>
+         <xs:element maxOccurs="1" minOccurs="0" name="device-name" type="xs:string"/>
+         <xs:element maxOccurs="1" minOccurs="0" name="error-code" type="xs:string"/>
+         <xs:element maxOccurs="1" minOccurs="0" name="error-subcode" type="xs:string"/>
+         <xs:element maxOccurs="1" minOccurs="0" name="error-message" type="xs:string"/>
+      </xs:sequence>
+   </xs:complexType>
+</xs:schema>

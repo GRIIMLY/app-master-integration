@@ -1,0 +1,1358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="9d23bef5-9768-4f56-8c10-bc9b2b132b58" activeEnvironment="Default" name="Soap Premier" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+   <con:settings/>
+   <con:interface xsi:type="con:RestService" id="dbad540a-e6c1-4e24-a194-181be9d8e6bc" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8081" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:settings/>
+      <con:definitionCache/>
+      <con:endpoints>
+         <con:endpoint>http://localhost:8081</con:endpoint>
+      </con:endpoints>
+      <con:resource name="ServiciosInt" path="/admin-rest/v1.0/serviciosInt/1" id="c447c86e-4294-4375-9c91-bf2b70d9b996">
+         <con:settings/>
+         <con:parameters/>
+         <con:method name="ServiciosInt 1" id="d8a37a5f-b457-46c9-a06b-cddca7dbcf16" method="DELETE">
+            <con:settings/>
+            <con:parameters>
+               <con:parameter>
+                  <con:name>id</con:name>
+                  <con:value>1</con:value>
+                  <con:style>QUERY</con:style>
+                  <con:default>1</con:default>
+                  <con:description xsi:nil="true"/>
+               </con:parameter>
+            </con:parameters>
+            <con:representation type="FAULT">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>404</con:status>
+               <con:params/>
+               <con:element xmlns:ser="http://localhost/admin-rest/v1.0/serviciosInt">ser:Fault</con:element>
+            </con:representation>
+            <con:representation type="REQUEST">
+               <con:mediaType>application/json</con:mediaType>
+               <con:params/>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>200</con:status>
+               <con:params/>
+            </con:representation>
+            <con:request name="Request 1" id="495725ac-01cd-467c-81a4-0c819f74c980" mediaType="application/json" postQueryString="false">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+               </con:settings>
+               <con:endpoint>http://localhost:8081</con:endpoint>
+               <con:request/>
+               <con:originalUri>http://localhost/admin-rest/v1.0/serviciosInt</con:originalUri>
+               <con:credentials>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters/>
+               <con:parameterOrder>
+                  <con:entry>id</con:entry>
+               </con:parameterOrder>
+            </con:request>
+         </con:method>
+         <con:method name="GetById" id="d8a37a5f-b457-46c9-a06b-cddca7dbcf16" method="GET">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="FAULT">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>404</con:status>
+               <con:params/>
+               <con:element xmlns:ser="http://localhost/admin-rest/v1.0/serviciosInt">ser:Fault</con:element>
+            </con:representation>
+            <con:representation type="REQUEST">
+               <con:mediaType>application/json</con:mediaType>
+               <con:params/>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>200</con:status>
+               <con:params/>
+            </con:representation>
+            <con:request name="Request 1" id="495725ac-01cd-467c-81a4-0c819f74c980" mediaType="application/json" postQueryString="false">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+               </con:settings>
+               <con:endpoint>http://localhost:8081</con:endpoint>
+               <con:request/>
+               <con:originalUri>http://localhost/admin-rest/v1.0/serviciosInt</con:originalUri>
+               <con:credentials>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters/>
+               <con:parameterOrder/>
+            </con:request>
+         </con:method>
+      </con:resource>
+   </con:interface>
+   <con:interface xsi:type="con:RestService" id="cbe13fd0-bfd7-470d-962a-f7f51ec261cf" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8082" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:settings/>
+      <con:definitionCache/>
+      <con:endpoints>
+         <con:endpoint>http://localhost:8082</con:endpoint>
+      </con:endpoints>
+      <con:resource name="AplicacionesInt" path="/admin-rest/v1.0/aplicacionesInt/" id="91c7cb86-9bf2-448a-970a-0e1337d471c2">
+         <con:settings/>
+         <con:parameters/>
+         <con:resource name="" path="by/" id="0fc14a79-a59f-490e-abb3-c4f7a60c4c54">
+            <con:settings/>
+            <con:parameters/>
+            <con:method name="GetByCode" id="5c4e71ff-3d19-4e99-aaa8-bfec96e167a7" method="GET">
+               <con:settings/>
+               <con:parameters>
+                  <con:parameter>
+                     <con:name>codigo</con:name>
+                     <con:value>app1</con:value>
+                     <con:style>QUERY</con:style>
+                     <con:default>app1</con:default>
+                     <con:description xsi:nil="true"/>
+                  </con:parameter>
+               </con:parameters>
+               <con:representation type="RESPONSE">
+                  <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+                  <con:status>200</con:status>
+                  <con:params/>
+                  <con:element xmlns:by="http://localhost/admin-rest/v1.0/aplicacionesInt/by/">by:Response</con:element>
+               </con:representation>
+               <con:representation type="RESPONSE">
+                  <con:mediaType xsi:nil="true"/>
+                  <con:status>204</con:status>
+                  <con:params/>
+                  <con:element>data</con:element>
+               </con:representation>
+               <con:representation type="RESPONSE">
+                  <con:mediaType xsi:nil="true"/>
+                  <con:status>204</con:status>
+                  <con:params/>
+                  <con:element>data</con:element>
+               </con:representation>
+               <con:representation type="FAULT">
+                  <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+                  <con:status>500</con:status>
+                  <con:params/>
+                  <con:element xmlns:by="http://localhost/admin-rest/v1.0/aplicacionesInt/by/">by:Fault</con:element>
+               </con:representation>
+               <con:representation type="RESPONSE">
+                  <con:mediaType xsi:nil="true"/>
+                  <con:status>0</con:status>
+                  <con:params/>
+                  <con:element>data</con:element>
+               </con:representation>
+               <con:representation type="RESPONSE">
+                  <con:mediaType xsi:nil="true"/>
+                  <con:status>0</con:status>
+                  <con:params/>
+                  <con:element>data</con:element>
+               </con:representation>
+               <con:request name="Request 1" id="13cda1d4-85fb-438b-9637-192811d4e9f7" mediaType="application/json">
+                  <con:settings>
+                     <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                  </con:settings>
+                  <con:endpoint>http://localhost:8082</con:endpoint>
+                  <con:request/>
+                  <con:originalUri>http://localhost/admin-rest/v1.0/aplicacionesInt/by/</con:originalUri>
+                  <con:credentials>
+                     <con:authType>No Authorization</con:authType>
+                  </con:credentials>
+                  <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                  <con:jmsPropertyConfig/>
+                  <con:parameters>
+                     <entry key="codigo" value="app2" xmlns="http://eviware.com/soapui/config"/>
+                  </con:parameters>
+                  <con:parameterOrder>
+                     <con:entry>codigo</con:entry>
+                  </con:parameterOrder>
+               </con:request>
+            </con:method>
+         </con:resource>
+         <con:resource name="autenticacionInt" path="autenticacionInt/" id="a4018176-659c-4263-8ddb-3a25fe550f21">
+            <con:settings/>
+            <con:parameters/>
+            <con:method name="Insert" id="fe479753-fa5e-4605-a914-2ceb63491019" method="POST">
+               <con:settings/>
+               <con:parameters/>
+               <con:representation type="REQUEST">
+                  <con:mediaType>application/json</con:mediaType>
+                  <con:params/>
+               </con:representation>
+               <con:representation type="FAULT">
+                  <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+                  <con:status>404 500</con:status>
+                  <con:params/>
+                  <con:element xmlns:aut="http://localhost/admin-rest/v1.0/aplicacionesInt/autenticacionInt/">aut:Fault</con:element>
+               </con:representation>
+               <con:representation type="RESPONSE">
+                  <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+                  <con:status>200</con:status>
+                  <con:params/>
+                  <con:element>Response</con:element>
+               </con:representation>
+               <con:request name="Request 1" id="9ed971d9-564e-47fd-ab15-6ed231597123" mediaType="application/json" postQueryString="false">
+                  <con:settings>
+                     <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                  </con:settings>
+                  <con:endpoint>http://localhost:8082</con:endpoint>
+                  <con:request>{
+   "id": "1",
+   "autenticaciones" : [{
+   "id": "3",
+   "tipo": "JWT",
+   "usuario": "jhon",
+   "estado": "ACTIVO",
+   "contrasenia": "1234"
+}]
+}</con:request>
+                  <con:originalUri>http://localhost/admin-rest/v1.0/aplicacionesInt/autenticacionInt/</con:originalUri>
+                  <con:credentials>
+                     <con:authType>No Authorization</con:authType>
+                  </con:credentials>
+                  <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                  <con:jmsPropertyConfig/>
+                  <con:parameters/>
+               </con:request>
+            </con:method>
+         </con:resource>
+         <con:resource name="configAdicionalInt" path="configAdicionalInt/" id="e0b707a1-21dc-4ca4-98a5-b5b9b6e65b47">
+            <con:settings/>
+            <con:parameters/>
+            <con:method name="Method 1" id="6e57beff-37f2-4e40-b830-64f19723d71b" method="POST">
+               <con:settings/>
+               <con:parameters/>
+               <con:representation type="FAULT">
+                  <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+                  <con:status>404 500</con:status>
+                  <con:params/>
+                  <con:element xmlns:con1="http://localhost/admin-rest/v1.0/aplicacionesInt/admin-rest/v1.0/aplicacionesInt/configAdicionalInt/">con1:Fault</con:element>
+               </con:representation>
+               <con:representation type="REQUEST">
+                  <con:mediaType>application/json</con:mediaType>
+                  <con:params/>
+               </con:representation>
+               <con:representation type="RESPONSE">
+                  <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+                  <con:status>200</con:status>
+                  <con:params/>
+                  <con:element>Response</con:element>
+               </con:representation>
+               <con:request name="Request 1" id="983c9376-caf3-40ab-9874-6200e2ee08bc" mediaType="application/json" postQueryString="false">
+                  <con:settings>
+                     <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                  </con:settings>
+                  <con:endpoint>http://localhost:8082</con:endpoint>
+                  <con:request>{
+	"id": "1",
+	"configuracionesAdic" : [{
+	"id": "1",
+	"configuracion":"UBICACION_CERTIFICADO",
+	"estado":"ACTIVO",
+	"valor":"Si"
+	}]
+}</con:request>
+                  <con:originalUri>http://localhost/admin-rest/v1.0/aplicacionesInt/admin-rest/v1.0/aplicacionesInt/configAdicionalInt/</con:originalUri>
+                  <con:credentials>
+                     <con:authType>No Authorization</con:authType>
+                  </con:credentials>
+                  <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                  <con:jmsPropertyConfig/>
+                  <con:parameters/>
+               </con:request>
+            </con:method>
+         </con:resource>
+         <con:method name="Insert" id="b652c253-85bb-4608-b29e-d4c7c8c19b76" method="POST">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="RESPONSE">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>200</con:status>
+               <con:params/>
+               <con:element xmlns:apl="http://localhost/admin-rest/v1.0/aplicacionesInt/">apl:Response</con:element>
+            </con:representation>
+            <con:representation type="REQUEST">
+               <con:mediaType>application/json</con:mediaType>
+               <con:params/>
+            </con:representation>
+            <con:representation type="FAULT">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>405 400 500</con:status>
+               <con:params/>
+               <con:element xmlns:apl="http://localhost/admin-rest/v1.0/aplicacionesInt/">apl:Fault</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>0</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>0</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>0</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>0</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>0</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:request name="App1" id="ea540ce5-1802-4ef1-81c2-70430ae17380" mediaType="application/json" postQueryString="false">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+               </con:settings>
+               <con:endpoint>http://localhost:8082</con:endpoint>
+               <con:request>{
+   "codigo": "app2",
+   "estado": "ACTIVO",
+   "nombre": "Maregua"
+}</con:request>
+               <con:originalUri>http://localhost/admin-rest/v1.0/aplicacionesInt/</con:originalUri>
+               <con:credentials>
+                  <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters/>
+               <con:parameterOrder/>
+            </con:request>
+         </con:method>
+         <con:method name="deleteByCode" id="0eea79d2-9ec6-4c38-9898-b3971261ab03" method="DELETE">
+            <con:settings/>
+            <con:parameters>
+               <con:parameter>
+                  <con:name>codigo</con:name>
+                  <con:value>1</con:value>
+                  <con:style>QUERY</con:style>
+                  <con:default>1</con:default>
+                  <con:description xsi:nil="true"/>
+               </con:parameter>
+            </con:parameters>
+            <con:representation type="FAULT">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>400</con:status>
+               <con:params/>
+               <con:element xmlns:apl="http://localhost/admin-rest/v1.0/aplicacionesInt/">apl:Fault</con:element>
+            </con:representation>
+            <con:representation type="REQUEST">
+               <con:mediaType>application/json</con:mediaType>
+               <con:params/>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>200</con:status>
+               <con:params/>
+            </con:representation>
+            <con:request name="Request 1" id="ee6b429e-df23-4140-937e-86c1a87665c1" mediaType="application/json" postQueryString="false">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+               </con:settings>
+               <con:endpoint>http://localhost:8082</con:endpoint>
+               <con:request/>
+               <con:originalUri>http://localhost/admin-rest/v1.0/aplicacionesInt/</con:originalUri>
+               <con:credentials>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters>
+                  <entry key="codigo" value="app1" xmlns="http://eviware.com/soapui/config"/>
+               </con:parameters>
+               <con:parameterOrder>
+                  <con:entry>codigo</con:entry>
+               </con:parameterOrder>
+            </con:request>
+         </con:method>
+         <con:method name="GetAll" id="2e7e7a06-e125-4519-85c8-cfd75a0d8b62" method="GET">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="RESPONSE">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>200</con:status>
+               <con:params/>
+               <con:element xmlns:apl="http://localhost/admin-rest/v1.0/aplicacionesInt/">apl:Response</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>204</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>400 500</con:status>
+               <con:params/>
+               <con:element xmlns:apl="http://localhost/admin-rest/v1.0/aplicacionesInt/">apl:Fault</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>0</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>0</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>0</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>0</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>0</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>0</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>0</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>0</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>204</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>0</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>204</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>204</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>204</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:request name="Request 1" id="935bcd0a-9403-4c55-a54b-2c0e774de317" mediaType="application/json">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+               </con:settings>
+               <con:endpoint>http://localhost:8082</con:endpoint>
+               <con:request/>
+               <con:originalUri>http://localhost/admin-rest/v1.0/aplicacionesInt/</con:originalUri>
+               <con:credentials>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters/>
+               <con:parameterOrder/>
+            </con:request>
+         </con:method>
+         <con:method name="update" id="7fdcd623-30d1-4110-b024-a1bc53dd57a2" method="POST">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="REQUEST">
+               <con:mediaType>application/json</con:mediaType>
+               <con:params/>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>200</con:status>
+               <con:params/>
+               <con:element xmlns:apl="http://localhost/admin-rest/v1.0/aplicacionesInt/">apl:Response</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>500 405 400</con:status>
+               <con:params/>
+               <con:element xmlns:apl="http://localhost/admin-rest/v1.0/aplicacionesInt/">apl:Fault</con:element>
+            </con:representation>
+            <con:request name="Request 1" id="81815ce9-6237-45fa-b9b3-b1bb797f2ae0" mediaType="application/json" postQueryString="false">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+               </con:settings>
+               <con:endpoint>http://localhost:8082</con:endpoint>
+               <con:request>{
+      "id": 1,
+      "codigo": "app1",
+      "estado": "INACTIVO",
+      "nombre": "Maregua"
+}</con:request>
+               <con:originalUri>http://localhost/admin-rest/v1.0/aplicacionesInt/</con:originalUri>
+               <con:credentials>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters/>
+               <con:parameterOrder/>
+            </con:request>
+         </con:method>
+      </con:resource>
+      <con:resource name="autenticacionInt" path="/admin-rest/v1.0/autenticacionInt/" id="d982dffe-2bb6-43ee-9cc9-a772667e5da1">
+         <con:settings/>
+         <con:parameters/>
+         <con:resource name="autenticacionInt" path="by/" id="b0fec144-1115-4678-8a8f-10c0021a3a74">
+            <con:settings/>
+            <con:parameters/>
+            <con:method name="getById" id="c7075847-09e3-4ec4-bd75-0bd48ab11bf0" method="GET">
+               <con:settings/>
+               <con:parameters>
+                  <con:parameter>
+                     <con:name>id</con:name>
+                     <con:value>1</con:value>
+                     <con:style>QUERY</con:style>
+                     <con:default>1</con:default>
+                     <con:description xsi:nil="true"/>
+                  </con:parameter>
+               </con:parameters>
+               <con:representation type="RESPONSE">
+                  <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+                  <con:status>200</con:status>
+                  <con:params/>
+                  <con:element xmlns:by="http://localhost/admin-rest/v1.0/autenticacionInt/by/">by:Response</con:element>
+               </con:representation>
+               <con:request name="Request 1" id="05af746b-96fc-4e24-97d9-4c120a155389" mediaType="application/json">
+                  <con:settings>
+                     <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                  </con:settings>
+                  <con:endpoint>http://localhost:8082</con:endpoint>
+                  <con:request/>
+                  <con:originalUri>http://localhost/admin-rest/v1.0/autenticacionInt/by/</con:originalUri>
+                  <con:credentials>
+                     <con:authType>No Authorization</con:authType>
+                  </con:credentials>
+                  <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                  <con:jmsPropertyConfig/>
+                  <con:parameters/>
+                  <con:parameterOrder>
+                     <con:entry>id</con:entry>
+                  </con:parameterOrder>
+               </con:request>
+            </con:method>
+         </con:resource>
+         <con:method name="getAll" id="b91a242e-52fb-4fdc-9be2-89bc03448cb2" method="GET">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>0</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+               <con:mediaType>text/html;charset=utf-8</con:mediaType>
+               <con:status>404</con:status>
+               <con:params/>
+               <con:element>html</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>200</con:status>
+               <con:params/>
+               <con:element>Response</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>0</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:request name="Request 1" id="ead92c32-ad44-424a-8d42-de2e1800e352" mediaType="application/json">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+               </con:settings>
+               <con:endpoint>http://localhost:8082</con:endpoint>
+               <con:request/>
+               <con:originalUri>http://localhost/admin-rest/v1.0/autenticacionInt/</con:originalUri>
+               <con:credentials>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters/>
+               <con:parameterOrder/>
+            </con:request>
+         </con:method>
+         <con:method name="deleteById" id="33ec6526-a72b-4593-b485-c09596456a88" method="DELETE">
+            <con:settings/>
+            <con:parameters>
+               <con:parameter>
+                  <con:name>id</con:name>
+                  <con:value>1</con:value>
+                  <con:style>QUERY</con:style>
+                  <con:default>1</con:default>
+                  <con:description xsi:nil="true"/>
+               </con:parameter>
+            </con:parameters>
+            <con:representation type="FAULT">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>405</con:status>
+               <con:params/>
+               <con:element xmlns:aut="http://localhost/admin-rest/v1.0/autenticacionInt/">aut:Fault</con:element>
+            </con:representation>
+            <con:representation type="REQUEST">
+               <con:mediaType>application/json</con:mediaType>
+               <con:params/>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>200</con:status>
+               <con:params/>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>200</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:request name="Request 1" id="41800913-41ee-4987-b081-478d22129d8e" mediaType="application/json" postQueryString="false">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+               </con:settings>
+               <con:endpoint>http://localhost:8082</con:endpoint>
+               <con:request/>
+               <con:originalUri>http://localhost/admin-rest/v1.0/autenticacionInt/</con:originalUri>
+               <con:credentials>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters/>
+               <con:parameterOrder>
+                  <con:entry>id</con:entry>
+               </con:parameterOrder>
+            </con:request>
+         </con:method>
+      </con:resource>
+      <con:resource name="configAdicionalInt" path="/admin-rest/v1.0/aplicacionesInt/configAdicionalInt/" id="cff42e93-230b-4be3-93f1-aaba56a9ef5b">
+         <con:settings/>
+         <con:parameters/>
+         <con:method name="deleteById" id="143a3304-a1c7-4619-89f1-6aaa050a8add" method="DELETE">
+            <con:settings/>
+            <con:parameters>
+               <con:parameter>
+                  <con:name>id</con:name>
+                  <con:value>1</con:value>
+                  <con:style>QUERY</con:style>
+                  <con:default>1</con:default>
+                  <con:description xsi:nil="true"/>
+               </con:parameter>
+            </con:parameters>
+            <con:representation type="REQUEST">
+               <con:mediaType>application/json</con:mediaType>
+               <con:params/>
+            </con:representation>
+            <con:representation type="FAULT">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>400</con:status>
+               <con:params/>
+               <con:element xmlns:con1="http://localhost/admin-rest/v1.0/configAdicionalInt/">con1:Fault</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>200</con:status>
+               <con:params/>
+            </con:representation>
+            <con:request name="Request 1" id="508eb2d4-99dd-4577-96fc-e92b991dd0c3" mediaType="application/json" postQueryString="false">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+               </con:settings>
+               <con:endpoint>http://localhost:8082</con:endpoint>
+               <con:request/>
+               <con:originalUri>http://localhost/admin-rest/v1.0/configAdicionalInt/</con:originalUri>
+               <con:credentials>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters/>
+               <con:parameterOrder>
+                  <con:entry>id</con:entry>
+               </con:parameterOrder>
+            </con:request>
+         </con:method>
+         <con:method name="Insert" id="54114b24-131f-4450-b2f6-4ca8eef63590" method="POST">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="REQUEST">
+               <con:mediaType>application/json</con:mediaType>
+               <con:params/>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>0</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>500 404</con:status>
+               <con:params/>
+               <con:element xmlns:con1="http://localhost/admin-rest/v1.0/configAdicionalInt/">con1:Fault</con:element>
+            </con:representation>
+            <con:request name="Request 1" id="901d1bae-8618-4b46-ae49-3e76e9435d7e" mediaType="application/json" postQueryString="false">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+               </con:settings>
+               <con:endpoint>http://localhost:8082</con:endpoint>
+               <con:request>{
+	"configuracion":"UBICACION_CERTIFICADO",
+	"estado":"ACTIVO",
+	"valor":"Si"
+	}</con:request>
+               <con:originalUri>http://localhost/admin-rest/v1.0/configAdicionalInt/</con:originalUri>
+               <con:credentials>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters/>
+            </con:request>
+         </con:method>
+      </con:resource>
+   </con:interface>
+   
+   
+   
+   <con:interface xsi:type="con:RestService" id="81b73373-5800-4686-8b98-801eb216bc77" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8080" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:settings/>
+      <con:definitionCache/>
+      <con:endpoints>
+         <con:endpoint>http://localhost:8080</con:endpoint>
+      </con:endpoints>
+      <con:resource name="Roles" path="/api/admin/admin-rest/v1.0/roles/" id="0fe3bcbd-1937-4303-82a0-d6500680eb52">
+         <con:settings/>
+         <con:parameters/>
+         <con:method name="traer todos" id="de3bd19b-7f5f-434d-8f37-8d86ba39ea78" method="GET">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="RESPONSE">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>200</con:status>
+               <con:params/>
+               <con:element>Response</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="roles" id="e585da3c-a1ab-48a4-a07f-63c377e12555" mediaType="application/json">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+               </con:settings>
+               <con:endpoint>http://localhost:8081</con:endpoint>
+               <con:request/>
+               <con:originalUri>http://localhost/admin-rest/v1.0/roles/</con:originalUri>
+               <con:credentials>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters/>
+               <con:parameterOrder/>
+            </con:request>
+         </con:method>
+         <con:method name="insertar" id="8be05e36-92ef-4648-870a-cbbcb6a2aeb0" method="POST">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="REQUEST">
+               <con:mediaType>application/json</con:mediaType>
+               <con:params/>
+            </con:representation>
+            <con:representation type="FAULT">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>405 401 404 500</con:status>
+               <con:params/>
+               <con:element xmlns:rol="http://localhost/admin-rest/v1.0/roles/">rol:Fault</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>201</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>201</con:status>
+               <con:params/>
+               <con:element xmlns:rol="http://localhost/admin-rest/v1.0/roles/">rol:Response</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>0</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>0</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="rol" id="734a79f1-e405-4f7a-9a4b-5f510238f074" mediaType="application/json" postQueryString="false">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJuaWNvbGFzIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTklTVFJBRE9SIl0sImlhdCI6MTU1ODM5MTc2MCwiZXhwIjoxNTU4NDc4MTYwfQ.4tGkR0bKL-FI5sIdNHWU_IJVe8-tweQRECDtJHu1b3xCuIL5GU5kNbCxaK67xTA3Egq9YSVjBci4r5HEiYXFkw" xmlns="http://eviware.com/soapui/config"/></con:setting>
+               </con:settings>
+               <con:endpoint>http://localhost:8083</con:endpoint>
+               <con:request>{
+	"nombre":"ROLE_OPE",
+	"estado":"ACTIVO"
+}</con:request>
+               <con:originalUri>http://localhost/admin-rest/v1.0/roles/</con:originalUri>
+               <con:credentials>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters/>
+               <con:parameterOrder/>
+            </con:request>
+         </con:method>
+         <con:method name="eliminar" id="49753fec-31f2-4b3d-873e-5f31b2ae64f3" method="DELETE">
+            <con:settings/>
+            <con:parameters>
+               <con:parameter>
+                  <con:name>id</con:name>
+                  <con:value>4</con:value>
+                  <con:style>QUERY</con:style>
+                  <con:default>4</con:default>
+                  <con:description xsi:nil="true"/>
+               </con:parameter>
+            </con:parameters>
+            <con:representation type="REQUEST">
+               <con:mediaType>application/json</con:mediaType>
+               <con:params/>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>200</con:status>
+               <con:params/>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>0</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="rol" id="326baa64-7fb2-49bd-bd27-b73401cf9915" mediaType="application/json" postQueryString="false">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+               </con:settings>
+               <con:endpoint>http://localhost:8081</con:endpoint>
+               <con:request/>
+               <con:originalUri>http://localhost/admin-rest/v1.0/roles/</con:originalUri>
+               <con:credentials>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters><entry key="id" value="1" xmlns="http://eviware.com/soapui/config"/></con:parameters>
+               <con:parameterOrder>
+                  <con:entry>id</con:entry>
+               </con:parameterOrder>
+            </con:request>
+         </con:method>
+         <con:method name="editar" id="0691eac5-eaf5-437f-952b-68314e30da99" method="PUT">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="REQUEST">
+               <con:mediaType>application/json</con:mediaType>
+               <con:params/>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>304</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>304</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>200</con:status>
+               <con:params/>
+               <con:element xmlns:rol="http://localhost/admin-rest/v1.0/roles/">rol:Response</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>304</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>500</con:status>
+               <con:params/>
+               <con:element xmlns:rol="http://localhost/admin-rest/v1.0/roles/">rol:Fault</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>304</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="rol" id="e612919d-0d2d-4ba0-a0b7-6da3c79fa8a1" mediaType="application/json" postQueryString="false">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+               </con:settings>
+               <con:endpoint>http://localhost:8081</con:endpoint>
+               <con:request>{
+	"id":"1",
+	"nombre":"ROLE_ADMINISTRADOR",
+	"estado":"ACTIVO"
+}</con:request>
+               <con:originalUri>http://localhost/admin-rest/v1.0/roles/</con:originalUri>
+               <con:credentials>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters/>
+            </con:request>
+         </con:method>
+      </con:resource>
+      <con:resource name="usuarios" path="/admin-rest/v1.0/usuarios/" id="d8b9c921-23f4-4c83-ac82-1279fd70f275">
+         <con:settings/>
+         <con:parameters/>
+         <con:method name="traer todos" id="6a8d5454-b67d-424c-bfb6-3a9235307e30" method="GET">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="FAULT">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>500</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>200</con:status>
+               <con:params/>
+               <con:element>Response</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="usuarios" id="45c303a9-cf62-4427-88f3-f95dcfd993a7" mediaType="application/json">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+               </con:settings>
+               <con:endpoint>http://localhost:8081</con:endpoint>
+               <con:request/>
+               <con:originalUri>http://localhost/admin-rest/v1.0/usuarios/</con:originalUri>
+               <con:credentials>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters/>
+               <con:parameterOrder/>
+            </con:request>
+         </con:method>
+         <con:method name="insertar" id="92652319-623e-43e2-a309-0ce16ae7b6cc" method="POST">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>0</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="REQUEST">
+               <con:mediaType>application/json</con:mediaType>
+               <con:params/>
+            </con:representation>
+            <con:representation type="FAULT">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>500</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>400 500</con:status>
+               <con:params/>
+               <con:element xmlns:usu="http://localhost/admin-rest/v1.0/usuarios/">usu:Fault</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>500</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>500</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>500</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>500</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>0</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>200</con:status>
+               <con:params/>
+               <con:element xmlns:usu="http://localhost/admin-rest/v1.0/usuarios/">usu:Response</con:element>
+            </con:representation>
+            <con:request name="usuario" id="ea575892-2f05-4dbf-90c1-70b417b28010" mediaType="application/json" postQueryString="false">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+               </con:settings>
+               <con:endpoint>http://localhost:8080</con:endpoint>
+               <con:request>{
+	  "id":"2",
+	  "usuario":"ni",
+	  "contrasena":"123",
+	  "codigo":"4",
+	  "nombre":"an",
+	  "estado":"ACTIVO",
+	  "appAdmin":
+	  		{
+			      "id": 1,
+			      "codigo": "4",
+			      "nombre": "NI",
+			      "numeroConsumo": 12,
+			      "estado": "ACTIVO"
+  		 	},
+	 "rolesRest":[
+	 		{
+      			"id": 1,
+     			"nombre": "ROLE_ADMIN",
+      			"estado": "ACTIVO"
+  			},{
+     			 "id": 2,
+    				 "nombre": "ROLE_NICOLAS",
+     			 "estado": "ACTIVO"
+  			 },{
+      			"id": 3,
+     			"nombre": "ROLE_USUARIO",
+      			"estado": "ACTIVO"
+  			 }
+  			
+   		] 
+}</con:request>
+               <con:originalUri>http://localhost/admin-rest/v1.0/usuarios/</con:originalUri>
+               <con:credentials>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters/>
+               <con:parameterOrder/>
+            </con:request>
+         </con:method>
+         <con:method name="eliminar" id="250eb0e1-13f7-48fa-b0ba-dbb51c363a86" method="DELETE">
+            <con:settings/>
+            <con:parameters>
+               <con:parameter>
+                  <con:name>codigo</con:name>
+                  <con:value>1</con:value>
+                  <con:style>QUERY</con:style>
+                  <con:default>1</con:default>
+                  <con:description xsi:nil="true"/>
+               </con:parameter>
+            </con:parameters>
+            <con:representation type="REQUEST">
+               <con:mediaType>application/json</con:mediaType>
+               <con:params/>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>200</con:status>
+               <con:params/>
+            </con:representation>
+            <con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="usuario" id="f096c149-317b-42df-94f2-519a181f0f20" mediaType="application/json" postQueryString="false">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+               </con:settings>
+               <con:endpoint>http://localhost:8081</con:endpoint>
+               <con:request/>
+               <con:originalUri>http://localhost/admin-rest/v1.0/usuarios/</con:originalUri>
+               <con:credentials>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters><entry key="codigo" value="20172678021" xmlns="http://eviware.com/soapui/config"/></con:parameters>
+               <con:parameterOrder>
+                  <con:entry>codigo</con:entry>
+               </con:parameterOrder>
+            </con:request>
+         </con:method>
+         <con:method name="editar" id="648d1372-8203-4913-af3e-ac4a416e5928" method="PUT">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:usu="http://localhost/admin-rest/v1.0/usuarios/">usu:Response</con:element></con:representation><con:request name="usuario" id="b57e7632-a329-4b59-aeb8-16d28de4c960" mediaType="application/json" postQueryString="false">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+               </con:settings>
+               <con:endpoint>http://localhost:8081</con:endpoint>
+               <con:request> {
+      "estado": "ACTIVO",
+      "id": 1,
+      "usuario": "nicolas",
+      "contrasena": "1234",
+      "codigo": "20172678021",
+      "nombre": "jesus nicolas",
+      "rolesRest": [      {
+         "estado": "ACTIVO",
+         "id": 1,
+         "nombre": "ROLE_ADMINISTRADOR"
+      }]
+   }</con:request>
+               <con:originalUri>http://localhost/admin-rest/v1.0/usuarios/</con:originalUri><con:credentials>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters/>
+            </con:request>
+         </con:method>
+      </con:resource>
+      <con:resource name="appadmin" path="/api/admin/admin-rest/v1.0/appadmin/" id="9f221746-b9e2-4828-beb2-1c3e7aa7cd39">
+         <con:settings/>
+         <con:parameters/>
+         <con:resource name="usuarios" path="usuarios/" id="9e675d30-f84c-4212-b783-ea885ab91504"><con:settings/><con:parameters/><con:method name="insertar" id="796682e4-873a-49e4-8f13-16edf5f23121" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="ae993a36-d305-4227-8099-0668c4b5b34c" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8081</con:endpoint><con:request>{
+	"id" : "1",
+	"usuarios" : [
+	{
+	  "usuario":"nicolas",
+	  "contrasena":"1234",
+	  "codigo" : "20172678021",
+	  "nombre" :  "jesus nicolas",
+	  "estado" :  "ACTIVO",  
+	  "rolesRest":[
+	 		{
+      			"id": 1
+  			}  			
+   	] 
+}
+	]
+}</con:request><con:originalUri>http://localhost/admin-rest/v1.0/appadmin/usuarios/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:method name="traer todos" id="1920d846-e6bc-44cd-b137-7fcfde2e884a" method="GET">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="RESPONSE">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>200</con:status>
+               <con:params/>
+               <con:element>Response</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>0</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="appAdmin" id="b7908595-c1b4-431c-9909-3e31a348e960" mediaType="application/json">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+               </con:settings>
+               <con:endpoint>http://localhost:8081</con:endpoint>
+               <con:request/>
+               <con:originalUri>http://localhost/admin-rest/v1.0/appadmin/</con:originalUri>
+               <con:credentials>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters/>
+               <con:parameterOrder/>
+            </con:request>
+         </con:method>
+         <con:method name="insertar" id="08ecbfdf-0f41-4f78-8b23-e0ca6ee863cc" method="POST">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="RESPONSE">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>0</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="REQUEST">
+               <con:mediaType>application/json</con:mediaType>
+               <con:params/>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>201</con:status>
+               <con:params/>
+               <con:element xmlns:app="http://localhost/admin-rest/v1.0/appadmin/">app:Response</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>500</con:status>
+               <con:params/>
+               <con:element xmlns:app="http://localhost/admin-rest/v1.0/appadmin/">app:Fault</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="appAdmin" id="657fa9cd-36bb-4c50-8e9a-436ef7913ae7" mediaType="application/json" postQueryString="false">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJuaWNvbGFzIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE1NTgxMzIwMjQsImV4cCI6MTU1ODIxODQyNH0.YvjhF1jGXlVPNLN3em3-SL02lWreaMUVzDdJPN9YwLsS88s7fNCfXbOB_jvG0VtbCbv463TfesexpseBvvkBiw" xmlns="http://eviware.com/soapui/config"/></con:setting>
+               </con:settings>
+               <con:endpoint>http://localhost:8083</con:endpoint>
+               <con:request>{	
+	"codigo":"12",
+     "nombre":"operatianasa",
+	"numeroConsumo":"0",
+	"estado":"ACTIVO"
+}</con:request>
+               <con:originalUri>http://localhost/admin-rest/v1.0/appadmin/</con:originalUri>
+               <con:credentials>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters/>
+               <con:parameterOrder/>
+            </con:request>
+         </con:method>
+         <con:method name="eliminar" id="9ca9a84a-d2be-4d61-826a-acffe26c7e2c" method="DELETE">
+            <con:settings/>
+            <con:parameters>
+               <con:parameter>
+                  <con:name>codigo</con:name>
+                  <con:value/>
+                  <con:style>QUERY</con:style>
+                  <con:default/>
+                  <con:description xsi:nil="true"/>
+               </con:parameter>
+            </con:parameters>
+            <con:representation type="RESPONSE">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>200</con:status>
+               <con:params/>
+            </con:representation>
+            <con:representation type="REQUEST">
+               <con:mediaType>application/json</con:mediaType>
+               <con:params/>
+            </con:representation>
+            <con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="appAdmin" id="315b902e-d8e0-4703-9024-ba1315b9b769" mediaType="application/json" postQueryString="false">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+               </con:settings>
+               <con:endpoint>http://localhost:8081</con:endpoint>
+               <con:request/>
+               <con:originalUri>http://localhost/admin-rest/v1.0/appadmin/</con:originalUri>
+               <con:credentials>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters><entry key="codigo" value="1" xmlns="http://eviware.com/soapui/config"/></con:parameters>
+               <con:parameterOrder>
+                  <con:entry>codigo</con:entry>
+               </con:parameterOrder>
+            </con:request>
+         </con:method>
+         <con:method name="editar" id="c6b5df48-d86b-41a7-8cca-c8c0d7e60f63" method="PUT">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="REQUEST">
+               <con:mediaType>application/json</con:mediaType>
+               <con:params/>
+            </con:representation>
+            <con:representation type="FAULT">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>500</con:status>
+               <con:params/>
+               <con:element xmlns:app="http://localhost/admin-rest/v1.0/appadmin/">app:Fault</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+               <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+               <con:status>200</con:status>
+               <con:params/>
+               <con:element xmlns:app="http://localhost/admin-rest/v1.0/appadmin/">app:Response</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="appAdmin" id="b14f05ee-ccc5-4ed7-9105-fe331e00aead" mediaType="application/json" postQueryString="false">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+               </con:settings>
+               <con:endpoint>http://localhost:8081</con:endpoint>
+               <con:request>{
+      "id": 1,
+      "codigo": "1",
+      "nombre": "bizagi",
+      "numeroConsumo": 0,
+      "estado": "ACTIVO"
+}</con:request>
+               <con:originalUri>http://localhost/admin-rest/v1.0/appadmin/</con:originalUri>
+               <con:credentials>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters/>
+               <con:parameterOrder/>
+            </con:request>
+         </con:method>
+      </con:resource>
+   </con:interface>
+   
+   
+   
+   <con:interface xsi:type="con:RestService" id="5bfac66c-e1ed-4fc1-8fdf-89eada07ed4e" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8083" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://localhost:8083</con:endpoint></con:endpoints><con:resource name="Login" path="/api/admin/admin-rest/login/" id="4323f4bf-964a-468a-b698-f457830eb772"><con:settings/><con:parameters/><con:method name="login" id="f0c270b9-5c21-40a5-a9e4-06d3b89df138" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:log="http://localhost/api/admin/admin-rest/login/">log:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:log="http://localhost/api/admin/admin-rest/login/">log:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="331487f6-e43e-42db-b60a-433a6854bc7c" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8083</con:endpoint><con:request>{
+	"usuario":"nicolas",
+	"contrasenia":"1234"
+}</con:request><con:originalUri>http://localhost/api/admin/admin-rest/login/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="test" path="/api/admin/admin-rest/v1.0/appadmin/test" id="f843432f-b47c-4a9c-b239-d08c0dabf40b"><con:settings/><con:parameters/><con:method name="test" id="8dfe70ad-e2f0-40b1-a5c1-a6e1ead0834b" method="GET"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>403 404 500</con:status><con:params/><con:element xmlns:test="http://localhost/api/admin/admin-rest/test">test:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>text/plain;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="Request 1" id="84c76869-057b-4157-8fb9-0120b03ef093" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJuaWNvbGFzIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE1NTgxMjY1MjgsImV4cCI6MTU1ODIxMjkyOH0.rsaassaVRn1R3B0MSxU__1CgZWdjaQkNI7il3SUNRWw1k-1JfCm3uOzdCIHuGcTCb6-p-DqiwQtBU9XkBDC5sQ" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:8083</con:endpoint><con:request/><con:originalUri>http://localhost/api/admin/admin-rest/test</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:properties/>
+   <con:wssContainer/>
+   <con:oAuth2ProfileContainer/>
+   <con:oAuth1ProfileContainer/>
+<con:sensitiveInformation/></con:soapui-project>
